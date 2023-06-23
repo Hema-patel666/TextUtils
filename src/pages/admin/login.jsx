@@ -3,7 +3,6 @@ import '../admin/LoginForm.css'
 import {FaUserCircle} from "react-icons/fa";
 
  function Login() {
-  // console.log("Inside Login form")
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
