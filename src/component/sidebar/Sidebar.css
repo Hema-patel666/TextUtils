@@ -1,0 +1,18 @@
+.sidebar{
+    width: 15%;
+    display: flex;
+    position: relative;
+    background-color: rgb(157, 163, 161);
+   
+
+}
+.home-icon{
+    margin-left: 20px;
+}
+.home-txt{
+    margin-left: 2px;
+   font-weight: bold;
+    vertical-align: -moz-middle-with-baseline
+    
+}
+

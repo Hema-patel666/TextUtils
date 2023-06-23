@@ -1,0 +1,39 @@
+.login-form { 
+    
+     background-color: #e88282;
+     border-radius: 6px;
+     width: 50%;
+     padding: 5%;
+     margin-bottom: 30%;
+     height: fit-content;
+
+  }
+  
+  .form-group {
+    margin-bottom:20px;
+    margin-top: 20px;    
+    position: relative;
+   
+    /* box-shadow: 0 0.188em 1.550em; */
+  }
+  .form{
+    margin-top: 20%;
+  }
+ input {
+  width: 70%;
+  /* height: 2em; */
+  /* border-radius: 0.25em; */
+  text-align: left;
+   padding: 2px;
+ }
+ .user-icon-page{
+ 
+  padding-top: 2px;
+  margin-left: 45%;
+
+ }
+ .user-icon-header{
+  margin-right: 20%;
+  padding: 2px;
+ }
+ 
