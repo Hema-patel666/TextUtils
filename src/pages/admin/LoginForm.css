@@ -3,9 +3,11 @@
      background-color: #e88282;
      border-radius: 6px;
      width: 50%;
-     padding: 5%;
+     margin-top: -700px;
+     margin-left:20% ;
      margin-bottom: 30%;
      height: fit-content;
+     padding: 10px;
 
   }
   

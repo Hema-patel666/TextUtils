@@ -24,6 +24,7 @@ import {FaUserCircle} from "react-icons/fa";
     });
 
     console.log(":::::",data);
+    
   };
 
   return (    

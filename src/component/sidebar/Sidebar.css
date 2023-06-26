@@ -1,9 +1,8 @@
 .sidebar{
-    width: 15%;
-    display: flex;
-    position: relative;
-    background-color: rgb(157, 163, 161);
-   
+    width: 20%;
+    margin-top: -3%;
+    background-color: rgb(39, 93, 75);
+    height: 100%;
 
 }
 .home-icon{

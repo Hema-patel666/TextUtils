@@ -42,6 +42,7 @@ function Home(props) {
   const handleCopyText = () => {
     let text=document.getElementById('myBox');
    text.select();
+   document.getSelection().removeAllRanges();
    navigator.clipboard.writeText(text.value);
    props.showAlert("Copy text....!","Success")
   }
@@ -61,25 +62,25 @@ function Home(props) {
   const [text, setText] = useState('');
   return (
     <>
-      <div className=" mb-3" style={{marginLeft:"10%"}}>
-        <label htmlFor="myBox" className="form-label"><h1>{props.heading}</h1></label>
-        <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="5" placeholder='Enter text here...'></textarea>
+      <div className=" mb-3" style={{marginLeft:'25%',marginTop:'-700px',marginRight:'5%'}}>
+        <label htmlFor="myBox" className="form-label"><h3>{props.heading}</h3></label>
+        <textarea className="form-control " value={text} onChange={handleOnChange} id="myBox" rows="5" placeholder='Enter text here...'></textarea>
       
       <div className='button'>
-      <button className='btn btn-primary mx-2' onClick={handleUpCase}>Convert to Uppercase</button>
-      <button className='btn btn-secondary mx-2' onClick={handleLowCase}>Convert to Lowercase</button>
-      <button className='btn btn-danger mx-2' onClick={handleClearText}>Clear Text</button>
-      <button className='btn btn-warning mx-2' onClick={handleDownloadText}>Download Here</button>
-      <button className='btn btn-info mx-2' onClick={handleCopyText}>Copy Text</button>
-      <button className='btn btn-success mx-2' onClick={handleExtraSpace}>Remove space</button>
+      <button disabled={text.length === 0} className='btn btn-primary mx-2 my-2' onClick={handleUpCase}>Convert to Uppercase</button>
+      <button disabled={text.length === 0}className='btn btn-secondary mx-2 my-2' onClick={handleLowCase}>Convert to Lowercase</button>
+      <button disabled={text.length === 0} className='btn btn-danger mx-2 my-2' onClick={handleClearText}>Clear Text</button>
+      <button disabled={text.length === 0} className='btn btn-warning mx-2 my-2' onClick={handleDownloadText}>Download Here</button>
+      <button disabled={text.length === 0} className='btn btn-info mx-2 my-2' onClick={handleCopyText}>Copy Text</button>
+      <button disabled={text.length === 0} className='btn btn-success mx-2 my-2' onClick={handleExtraSpace}>Remove space</button>
       </div>
       
       <div className="container my-3">
         <h2>Your text summry</h2>
-        <p><b>{text.split(" ").length}</b>  and <b>{text.length}</b> characters!!</p>
-        <p><b>{0.008 * text.split(" ").length}</b> minutes read </p>
+        <p><b>{text.split(" ").filter((ele)=>{return ele.length !== 0}).length}</b>  and <b>{text.length}</b> characters!!</p>
+        <p><b>{0.008 * text.split(" ").filter((ele)=>{return ele.length !== 0}).length}</b> minutes read </p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:'Nothing to preview ......' }</p>
       </div>
       </div>
     </>
