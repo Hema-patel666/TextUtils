@@ -17,9 +17,9 @@ const Sidebar = () => {
                    <Link className="nav-link active text-light my-2" to="/about"><FaInfoCircle className='home-icon' size={30} /><span className='home-txt' size={30}>  About Us </span> </Link>
                     </li>
                     <li>
-                       <Link className="nav-link active text-light my-2" aria-current="page" to="/"><FaShoppingCart className='home-icon' size={30}/><span className='home-txt' size={30}> Orders</span></Link>
+                       <Link className="nav-link active text-light my-2" aria-current="page" to="/addUser"><FaShoppingCart className='home-icon' size={30}/><span className='home-txt' size={30}> Orders</span></Link>
                     </li>
-                    <li><Link className="nav-link active text-light my-2" aria-current="page" to="/"><FaUser className='home-icon' size={30}/><span className='home-txt' size={30}>  Customers</span> </Link>
+                    <li><Link className="nav-link active text-light my-2" aria-current="page" to="/userlist"><FaUser className='home-icon' size={30}/><span className='home-txt' size={30}>  Customers</span> </Link>
                     </li></ul><hr />
 
     </div>

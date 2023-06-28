@@ -62,7 +62,7 @@ function Home(props) {
   const [text, setText] = useState('');
   return (
     <>
-      <div className=" mb-3" style={{marginLeft:'25%',marginTop:'-700px',marginRight:'5%'}}>
+      <div className=" mb-3" style={{marginLeft:'5%',marginRight:'5%'}}>
         <label htmlFor="myBox" className="form-label"><h3>{props.heading}</h3></label>
         <textarea className="form-control " value={text} onChange={handleOnChange} id="myBox" rows="5" placeholder='Enter text here...'></textarea>
       

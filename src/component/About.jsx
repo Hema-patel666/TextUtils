@@ -31,7 +31,7 @@ export default function About() {
 
     }
     return (
-        <div style={{marginTop:-700,marginLeft:'25%',marginRight:'5%'}}>
+        <div style={{marginLeft:'5%',marginRight:'5%'}}>
             <div className='container' style={myStyle}>
                 <h1 className='my-2'>About us</h1>
                 <div className="accordion" id="accordionExample" >

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function Header(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
-      <div className="container-fluid">
+      <div className="container">
         <Link className="navbar-brand" to="/">
           {props.title}
         </Link>

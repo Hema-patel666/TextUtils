@@ -8,7 +8,10 @@ import Alert from './component/Alert/Alert';
 import About from './component/About';
 import Login from './pages/admin/login';
 import Home from './component/home/home';
-
+import UserList from './component/User/Userlist';
+import AddUser from './component/User/Adduser';
+import {Container,Row,Col} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -32,7 +35,7 @@ const removeBodyClasses = ()=>{
   document.body.classList.remove('bg-warning');
   document.body.classList.remove('bg-info');
 }
-  const toggleMode = (cls) => {
+const toggleMode = (cls) => {
     removeBodyClasses();
     document.body.classList.add('bg-'+cls);
     console.log("INSIDE PRIMARY:::",cls)
@@ -67,25 +70,38 @@ const removeBodyClasses = ()=>{
 
   return (  
    <>
+    <Container fluid>
     <Router>
-      <div className="App">
+     
+      <Row>
+        <Col className='p-0'>
+               
         <Header title="MyApp" mode={mode} toggleMode={toggleMode} />
-        <div>
-          <Alert alert={alert} />
-         
-          <div  style={{height:'100vh'}} toggleMode={toggleMode}   >
-            <Sidebar />
-            </div>
-            <div>
+        </Col>
+      </Row>
+      <Row >
+      <Alert alert={alert} />  
+        <Col sm={2} xs={4} className='bg-primary'>         
+         <Sidebar />                      
+        </Col>
+        <Col className='mt-3' sm={9} xs={4}>
             <Routes>            
               <Route path="/" element={<Home showAlert={showAlert} heading={'TextUtils - Convert Upercase, Download Text, Remove Extra Space'} mode={mode} />} />
               <Route path="/about" element={<About mode={mode}/>} />
               <Route path="/login" element={<Login />} />
+              <Route  path="/userlist" element={< UserList />} />
+              <Route path="/addUser" element={<AddUser/>} />              
             </Routes>
-            </div>
-        </div>
-      </div>
-    </Router>
+        </Col>
+      </Row> 
+      <Row>
+        <Col className ='bg-warning'>
+        <div> React_example@gmail.com</div>
+        </Col>
+      </Row>
+      </Router>
+      </Container>      
+    
     
     </>
     
