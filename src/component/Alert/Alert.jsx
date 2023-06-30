@@ -13,7 +13,6 @@ function Alert(props) {
           
         </div>}
         </div>
-        // style={{height:'50px'}}
        
     )
 }
